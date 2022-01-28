@@ -11,7 +11,7 @@ sls=sales_prediction()
 def home_page():
     return render_template("index.html")
 
-@app.route('/predict',methods=['POST','GET']) # route to show the predictions in a web UI
+@app.route('/',methods=['POST','GET']) # route to show the predictions in a web UI
 @cross_origin()
 def prediction():
     if request.method == 'POST':
